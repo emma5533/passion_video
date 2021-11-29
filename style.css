@@ -1,0 +1,162 @@
+/*GENERELT*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@font-face {
+  font-family: RoadRage;
+  src: url(roadrage-regular-webfont.woff2);
+}
+
+@font-face {
+  font-family: Lora;
+  src: url(lora-variablefont_wght-webfont.woff2);
+}
+
+/*SEKTIONER KRONOLOGISK*/
+
+hr {
+  color: rgb(42, 6, 247);
+  margin-block: 20px;
+}
+
+/*nav*/
+header nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  margin: 30px;
+  margin-right: 50px;
+}
+
+a {
+  font-family: Lora;
+  color: rgb(42, 6, 247);
+  text-decoration: none;
+  margin-inline: 10px;
+}
+
+a:hover {
+  color: rgb(112, 158, 228);
+}
+
+/*baggrundsfarve*/
+body {
+  background-color: antiquewhite;
+}
+
+/*splash-billede*/
+#top {
+  background-image: url(./lade_bred.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+#top_text {
+  grid-column: 4;
+  grid-row: 2/3;
+}
+
+h1 {
+  font-family: RoadRage;
+  font-size: 4rem;
+  color: antiquewhite;
+}
+
+/*main grid*/
+main {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 1000px) 1fr;
+  margin-inline: 50px;
+}
+main section {
+  grid-column: 2/3;
+}
+
+/*overskrifter*/
+h3 {
+  font-family: Lora;
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: rgb(42, 6, 247);
+}
+
+/*brødtekster*/
+p {
+  font-family: Lora;
+  font-size: 0.9rem;
+  line-height: 21px;
+  margin-top: 10px;
+  margin-bottom: 16px;
+}
+
+/*video overskrift*/
+#mid h3 {
+  text-align: center;
+}
+
+/* video*/
+#video {
+  display: flex;
+  justify-content: center;
+}
+
+/*footer*/
+footer p {
+  color: rgb(42, 6, 247);
+  text-align: center;
+  margin: 15px;
+}
+
+/*QUERIES*/
+
+@media (max-width: 600px) {
+  #video {
+  }
+}
+@media (min-width: 600px) {
+  #top_text {
+    grid-column: 2/5;
+    grid-row: 2;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  #mid_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  #bot_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+}
+
+@media (min-width: 1000px) {
+  #top_text {
+    grid-column: 2/7;
+    grid-row: 3;
+    margin-bottom: 70px;
+  }
+
+  h1 {
+    font-size: 6rem;
+  }
+}
